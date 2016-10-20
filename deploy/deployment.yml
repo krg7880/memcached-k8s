@@ -1,0 +1,26 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    deployment: memcached
+  name: memcached
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: memcached
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: memcached
+    spec:
+      containers:
+      - image: memcached:MEMCACHED_TAG
+        name: memcached
+        resources: {}
+        tty: true
+        stdin: true
+      restartPolicy: Always
+status: {}

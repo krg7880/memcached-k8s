@@ -3,10 +3,10 @@ apiVersion: extensions/v1beta1
 kind: Service
 apiVersion: v1
 metadata:
-  creationTimestamp: null
   labels:
     service: memcached
   name: memcached
+  namespace: FQ_NAMESPACE
 spec:
   type: ClusterIP
   selector:

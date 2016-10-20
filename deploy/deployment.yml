@@ -5,6 +5,7 @@ metadata:
   labels:
     deployment: memcached
   name: memcached
+  namespace: FQ_NAMESPACE
 spec:
   replicas: 1
   selector:
